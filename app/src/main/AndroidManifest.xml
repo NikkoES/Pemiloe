@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nesnata.pemiloe">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".admin.AdminMainActivity"
+            android:label="Dashboard Administrator" />
+        <activity
+            android:name=".admin.AdminUserActivity"
+            android:label="Kelola Data User"
+            android:parentActivityName=".admin.AdminMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".admin.AdminMainActivity" />
+        </activity>
+        <activity
+            android:name=".admin.AdminKandidatActivity"
+            android:label="Kelola Data Kandidat"
+            android:parentActivityName=".admin.AdminMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".admin.AdminMainActivity" />
+        </activity>
+        <activity
+            android:name=".admin.AdminDetailUserActivity"
+            android:label="Detail User"
+            android:parentActivityName=".admin.AdminDetailUserActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".admin.AdminDetailUserActivity" />
+        </activity>
+        <activity
+            android:name=".admin.AdminDetailKandidatActivity"
+            android:label="Detail Kandidat"
+            android:parentActivityName=".admin.AdminKandidatActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".admin.AdminKandidatActivity" />
+        </activity>
+        <activity
+            android:name=".admin.AdminHasilActivity"
+            android:label="Hasil Pemilihan"
+            android:parentActivityName=".admin.AdminMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".admin.AdminMainActivity" />
+        </activity>
+        <activity
+            android:name=".admin.AdminMulaiActivity"
+            android:label="Status Akses Pemilu"
+            android:parentActivityName=".admin.AdminMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".admin.AdminMainActivity" />
+        </activity>
+        <activity
+            android:name=".user.UserMainActivity"
+            android:label="Dashboard User" />
+        <activity
+            android:name=".user.UserKandidatActivity"
+            android:label="Kandidat Ketua DS"
+            android:parentActivityName=".user.UserMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".user.UserMainActivity" />
+        </activity>
+        <activity
+            android:name=".user.UserDetailKandidatActivity"
+            android:label="Detail Kandidat Ketua"
+            android:parentActivityName=".user.UserKandidatActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".user.UserKandidatActivity" />
+        </activity>
+        <activity
+            android:name=".user.UserPilihanActivity"
+            android:label="Detail Kandidat Ketua"
+            android:parentActivityName=".user.UserMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".user.UserMainActivity" />
+        </activity>
+    </application>
+
+</manifest>
